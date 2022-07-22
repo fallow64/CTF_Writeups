@@ -1,5 +1,5 @@
-# BDSec CTF
-I participated in BDSec CTF 2022. I didn't place well at all and I couldn't dedicated much time into it, but it seemed like it would be fun. This is my 2nd ever live CTF, so I'm pretty bad at this kind of stuff. Anyways, the challenge I want to write about it Loop Lover. It's a pretty easy challenge at 100 points, but it was the one I enjoyed solving the most.
+# Loop Lover
+This challenge was part of BDSec CTF 2022. This is my 2nd ever live CTF, so I'm pretty bad at this kind of stuff. Anyways, the challenge I want to write about it Loop Lover. It's a pretty easy challenge at 100 points, but it was the one I enjoyed solving the most.
 
 ## The Challenge
 The description read as follows:
