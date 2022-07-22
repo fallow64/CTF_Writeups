@@ -1,6 +1,6 @@
 # Dominoes
 
-This challenge from BDSec 2022 was pretty interesting.
+This challenge from BDSec 2022 was pretty interesting (for my newb self).
 
 The description read as follows:
 > My classmate Zeem is into loops and basic bitwise operations. Interestingly, he thought he could create an encryption algorithm and use it to protect his files.
