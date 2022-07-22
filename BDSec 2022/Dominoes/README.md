@@ -36,4 +36,10 @@ The encryption method used here is basically to take each character, XOR the cha
 My immediate thought was the last character. Because it has nothing to XOR to the right of it, it would stay the same. In the encrypted flag the last character was a right bracket, most likely from the flag format. So, from here, we just work backwards.
 
 Here is an excerpt of the end: `I}N}`
-From here, you do `'N' XOR '}'`, which is 3, then `'}' XOR '3`, which is 3, then `'I' XOR ('3' XOR '3' XOR '4')`. This part may be confusing to read, but it was also very confusing to code. I guess the best explanation is that instead of using the encoded string to get the next thing to XOR, you use the one that you are generating.
+From here, you do `'N' XOR '}'`, which is 3, then `'}' XOR '3 XOR '}'`, which is 3, then `'I' XOR '3' XOR '3' XOR '}` (which is 4). This part may be confusing to read, but it was also very confusing to code. I guess the best explanation is that instead of using the encoded string to get the next thing to XOR, you use the one that you are generating.
+
+Anyways, using this you can decrypt the file and get the resulting flag:
+```
+BDSEC{n0t_50_e45y_hUh?_433}
+```
+If you wanna take a lesson from this, it's probably that experience helps. Even thought I've only played 1 CTF ever before this, I still knew to look out for the end of linear-iterative bitwise encryptions (which is a fancy word that I probably made up and also used wrong).
