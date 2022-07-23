@@ -1,3 +1,5 @@
+#! /usr/bin/python3
+
 def encode(t):
     c = list(t)
     for i in range(len(t)):
