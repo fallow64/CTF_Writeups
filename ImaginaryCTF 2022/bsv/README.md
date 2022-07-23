@@ -8,7 +8,7 @@ The description is:
 
 One file was attached, `flag.bsv`:
 ```
-BEEAccordingBEEtoBEEallBEEknownBEE BEE BEElawsBEEofBEEaviationBEEthereBEEisBEEnoBEE BEE BEEwayBEEaBEEbeeBEEshouldBEEbeBEEableBEEtoBEEfly.BEE BEEItsBEEwingsBEEareBEEtooBEEsmallBEEtoBEEgetBEEitsBEE BEEfatBEElittleBEEbodyBEEoffBEEtheBEEground.BEETheBEEbeeBEE BEE BEEofBEEcourseBEE BEE BEE BEE BEE BEEfliesBEEanywayBEE BEEbecauseBEEbeesBEEdon'tBEEcareBEEwhatBEEhumansBEEthinkBEEisBEE
+BEEAccordingBEEtoBEEallBEEknownBEE BEE BEElawsBEEofBEEaviationBEEthereBEEisBEEnoBEE BEE BEEwayBEEaBEEbeeBEEshouldBEEbeBEEableBEEtoBEEfly.BEE BEEItsBEEwingsBEEareBEEtooBEEsmallBEEtoBEEgetBEEitsBEE BEEfatBEElittleBEEbodyBEEoffBEEtheBEEground.BEETheBEEbeeBEE BEE BEEofBEEcourseBEE BEE BEE BEE BEE BEEfliesBEEanywayBEE BEEbecauseBEEbeesBEEdon'tBEEcareBEEwhatBEEhumansBEEthinkBEEisBEE (etc... you get the point)
 ```
 This was just a .csv file, except that the commas were replaced with `"BEE"`.
 
