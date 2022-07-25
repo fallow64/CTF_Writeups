@@ -38,7 +38,7 @@ LITCTF{flush3d_3m0ji_o.0}
 ## Notes
 
 1. The python code is horrendous. I tried to clean it up a bit, however it's still very messy to follow. Just make sure to put your hazmat suit on before reading it.
-2. In my implementation, I make a request to the server for each SQL query. This is very inefficient and I could've ran a python file on the server that did the bruteforcing (I'm pretty sure bruteforcing's the correct term) and just printed the final flag. But, my implementation works well enoughand that's the most important thing.
+2. In my implementation, I make a request to the server for each SQL query. This is very inefficient and I could've ran a python file on the server that did the bruteforcing (I'm pretty sure bruteforcing is the correct term) and just printed the final flag. But, my implementation works well enough and that's the most important thing.
 3. The main site checks whether or not you put the correct username and password and says
 
     > OMG you are like so good at guessing our flag I am lowkey jealoussss.
