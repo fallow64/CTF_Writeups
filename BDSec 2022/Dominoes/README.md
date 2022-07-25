@@ -34,8 +34,8 @@ The encryption method used here is basically to take each character, XOR the cha
 My immediate thought was the last character. Because it has nothing to XOR to the right of it, it would stay the same. In the encrypted flag the last character was a right bracket, most likely from the flag format. So, from here, we just work backwards.
 
 Here is an excerpt of the end: `I}N}`
-So, you would take `'N' XOR '}'`, which is 3, then `'}' XOR '3' XOR '}'`, which is 3, then `'I' XOR '3' XOR '3' XOR '}'`
-From here, you do `'N' XOR '}'`, which is 3, then `'}' XOR '3 XOR '}'`, which is 4. You repeat this process for the entire encrypted flag, and it results in this:
+So, you would take `'N' XOR '}'`, which is 3, then `'}' XOR '3' XOR '}'`, which is 3, then `'I' XOR '3' XOR '3' XOR '}'` which is 4. You repeat this process for the entire encrypted flag, and it results in this:
+
 ```
 BDSEC{n0t_50_e45y_hUh?_433}
 ```
