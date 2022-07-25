@@ -1,0 +1,2 @@
+# .bsv != Bluespec
+*.bsv linguist-vendored=false
