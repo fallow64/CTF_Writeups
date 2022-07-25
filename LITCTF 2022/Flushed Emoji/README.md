@@ -7,7 +7,7 @@ The description reads as follows:
 
 You are given two flask servers, one for the primary site and one for a data server. I won't put those here, but they will be in the repository.
 
-The main site has a button with a form that "steals" your username and password and displays the password back to you. It prevents you from putting periods in the password field, but that's easily mitigated. From here, you just use SSTI injection in the password field to get RCE.
+Let's focus on the main site first. It has a button with a form that "steals" your username and password and displays the password back to you. It prevents you from putting periods in the password field, but that's easily mitigated. It also sends a request to a local server in a POST request (the IP of which is omitted in the provided source code). From here, you just use SSTI injection in the password field to get RCE.
 
 ```python
 {{lipsum['__globals__']['os']['popen']('ls')['read']()}}
@@ -18,13 +18,13 @@ Now, we can view the source code of the running server and find the IP for data 
 The data server just selects any users that match the same username and password. However, it only returns `True` or `False`, based on whether or not it selected anything. The query ends up like this:
 
 ```SQL
-SELECT * FROM users WHERE username='{username}' AND password='{password}'
+SELECT * FROM users WHERE username='<username>' AND password='<password>'
 ```
 
 Using the RCE to run python from the command line, you can use the `requests` library to POST to the data server. Remember though, you can't use periods, so I just encoded them as `\x2E` because bash replaces it. From here, it's just bog-standard blind SQL injection. Check the first character of the password against all printable characters, and if it matches move on to the next one. You can see the full implementation in the `bruteforce()` function of `solve.py`. The SQL query ends up looking like this (curly brackets are python variables):
 
 ```SQL
-SELECT * FROM users WHERE username='XXXXX' AND password='XXXXX' OR substr(password, {str(index)}, 1)='{char}'/*'
+SELECT * FROM users WHERE username='XXXXX' AND password='XXXXX' OR substr(password, <current index>, 1)='<current char>'/*'
 ```
 
 Using this, you get the flag:

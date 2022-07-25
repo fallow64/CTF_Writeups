@@ -8,7 +8,8 @@ while True:
   assert all(n in "()abcdefghijklmnopqrstuvwxyz" for n in a)
   exec(a)
 ```
-This is just a python sandbox with the restriction that all commands had to be undercase letters or paranthesis, and no spaces were allowed. I had no clue how to approach this at the start. When I first saw this, I thought that the tools that we have are builtins or tuples.
+
+This is just a python sandbox with the restriction that all commands have to be undercase letters or paranthesis, and no spaces are allowed. I had no clue how to approach this at the start. When I first saw this, I immediately thought that the tools that we have are builtins or tuples.
 
 The first idea I had is that we could import things using some sort of tuple and `chr()` then call it, but I honestly had no idea what to do. My mind was stuck on building integers, using `chr()`, and then using import or something like that.
 
